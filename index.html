@@ -232,6 +232,67 @@
       color: #c56a7d;
       margin: 10px 0;
     }
+    /* Typing Animation */
+
+.typing-text {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border-right: 4px solid #c56a7d;
+
+  animation:
+    typing 4s steps(30, end) forwards,
+    blink 0.8s infinite;
+
+  margin: auto;
+}
+
+/* Typing Effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+@media (max-width:768px) {
+
+  .typing-text {
+    white-space: normal;
+    width: 100%;
+    border-right: none;
+
+    animation:
+      fadeText 2s ease forwards;
+  }
+
+  @keyframes fadeText {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+/* Cursor Blink */
+@keyframes blink {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #c56a7d;
+  }
+}
 
     /* ========================= */
     /* COUPLE IMAGE */
@@ -564,14 +625,14 @@
         <!-- NAMES -->
         <div class="names">
 
-          <h1 class="groom-name" data-aos="fade-right">
-            Mohamed Abubakkar Siddiq
+          <h1 class="groom-name typing-text" data-text="Mohamed Abubakkar Siddiq">
+           Mohamed Abubakkar Siddiq
           </h1>
 
           <div class="and-text">&</div>
 
-          <h1 class="bride-name" data-aos="fade-left">
-            Rizwana
+          <h1 class="bride-name typing-text">
+           Rizwana
           </h1>
 
         </div>
