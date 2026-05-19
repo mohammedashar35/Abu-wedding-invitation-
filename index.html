@@ -4,7 +4,6 @@
 <head>
 
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Wedding Invitation</title>
@@ -63,7 +62,6 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
     }
 
     /* ========================= */
@@ -120,7 +118,6 @@
       100% {
         transform: translateY(120vh) rotate(360deg);
       }
-
     }
 
     /* ========================= */
@@ -151,7 +148,6 @@
       overflow: hidden;
 
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-
     }
 
     .invite-card::before {
@@ -167,7 +163,6 @@
       border-radius: 25px;
 
       pointer-events: none;
-
     }
 
     /* ========================= */
@@ -183,7 +178,6 @@
       z-index: 1;
 
       opacity: 0.95;
-
     }
 
     .top-left {
@@ -220,7 +214,6 @@
       z-index: 5;
 
       text-align: center;
-
     }
 
     .arabic {
@@ -230,7 +223,6 @@
       color: #7f3043;
 
       margin-bottom: 10px;
-
     }
 
     .sub-title {
@@ -240,7 +232,6 @@
       color: #444;
 
       line-height: 1.7;
-
     }
 
     .save-date {
@@ -252,7 +243,6 @@
       color: #c56a7d;
 
       margin-top: 25px;
-
     }
 
     .invite-text {
@@ -264,19 +254,26 @@
       color: #444;
 
       line-height: 1.8;
-
     }
+
+    /* ========================= */
+    /* NAMES */
+    /* ========================= */
 
     .groom-name,
     .bride-name {
 
       font-family: 'Alex Brush', cursive;
 
-      font-size: 95px;
+      font-size: 90px;
 
       color: #6e2235;
 
-      line-height: 1.1;
+      line-height: 1.3;
+
+      width: 100%;
+
+      text-align: center;
 
       display: flex;
 
@@ -284,6 +281,23 @@
 
       align-items: center;
 
+      overflow: visible;
+
+      flex-wrap: wrap;
+    }
+
+    .typing-groom,
+    .typing-bride {
+
+      display: inline-block;
+
+      white-space: nowrap;
+
+      overflow: hidden;
+
+      border-right: 3px solid #c56a7d;
+
+      padding-right: 6px;
     }
 
     .and-text {
@@ -295,28 +309,6 @@
       color: #c56a7d;
 
       margin: 10px 0;
-
-    }
-
-    /* ========================= */
-    /* WRITING TEXT ANIMATION */
-    /* ========================= */
-
-    .typing-groom,
-    .typing-bride {
-
-      display: inline-block;
-
-      overflow: hidden;
-
-      white-space: nowrap;
-
-      border-right: 4px solid #c56a7d;
-
-      width: fit-content;
-
-      padding-right: 8px;
-
     }
 
     /* ========================= */
@@ -338,7 +330,6 @@
       animation: float 4s ease-in-out infinite;
 
       filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.12));
-
     }
 
     @keyframes float {
@@ -354,16 +345,15 @@
       100% {
         transform: translateY(0px);
       }
-
     }
 
     /* ========================= */
-    /* DATE */
+    /* DATE SECTION */
     /* ========================= */
 
     .date-wrapper {
 
-      margin-top: 40px;
+      margin-top: 50px;
 
       display: flex;
 
@@ -371,39 +361,41 @@
 
       align-items: center;
 
-      gap: 35px;
+      gap: 50px;
 
-      flex-wrap: wrap;
-
+      flex-wrap: nowrap;
     }
 
     .date-side {
 
-      width: 180px;
+      min-width: 180px;
 
       border-top: 2px solid #d1939e;
-
       border-bottom: 2px solid #d1939e;
 
-      padding: 10px;
+      padding: 12px 20px;
 
       font-size: 35px;
-
       font-weight: 600;
 
       color: #4a4a4a;
+    }
 
+    .center-date {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
     }
 
     .center-date span,
     .center-date small {
 
-      display: block;
-
-      font-size: 28px;
+      font-size: 40px;
 
       color: #4a4a4a;
-
     }
 
     .center-date h2 {
@@ -414,8 +406,7 @@
 
       color: #c56a7d;
 
-      margin: 5px 0;
-
+      margin: 0;
     }
 
     /* ========================= */
@@ -431,7 +422,6 @@
       color: #7f3043;
 
       margin-top: 40px;
-
     }
 
     .venue-text {
@@ -443,7 +433,6 @@
       color: #333;
 
       line-height: 1.8;
-
     }
 
     .landmark {
@@ -461,7 +450,6 @@
       font-size: 28px;
 
       color: #7f3043;
-
     }
 
     .qr-box {
@@ -484,7 +472,6 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
       transition: 0.4s;
-
     }
 
     .qr-box:hover {
@@ -497,7 +484,6 @@
       height: 180px;
 
       object-fit: contain;
-
     }
 
     /* ========================= */
@@ -515,7 +501,6 @@
         padding: 35px 18px;
 
         border-radius: 25px;
-
       }
 
       .invite-card::before {
@@ -523,7 +508,6 @@
         inset: 8px;
 
         border-radius: 18px;
-
       }
 
       .corner {
@@ -548,7 +532,18 @@
 
       .groom-name,
       .bride-name {
+
         font-size: 52px;
+
+        line-height: 1.4;
+      }
+
+      .typing-groom,
+      .typing-bride {
+
+        white-space: normal;
+
+        border-right: none;
       }
 
       .and-text {
@@ -559,16 +554,34 @@
         width: 300px;
       }
 
-      .date-side {
+      .date-wrapper {
 
-        width: 120px;
+        flex-direction: column;
 
-        font-size: 20px;
+        gap: 20px;
+      }
 
+      .center-date {
+
+        gap: 10px;
+      }
+
+      .center-date span,
+      .center-date small {
+
+        font-size: 26px;
       }
 
       .center-date h2 {
-        font-size: 50px;
+
+        font-size: 65px;
+      }
+
+      .date-side {
+
+        min-width: 140px;
+
+        font-size: 24px;
       }
 
       .venue-title {
@@ -583,25 +596,13 @@
 
         width: 160px;
         height: 160px;
-
       }
 
       .qr-box img {
 
         width: 120px;
         height: 120px;
-
       }
-
-      .typing-groom,
-      .typing-bride {
-
-        white-space: normal;
-
-        border-right: none;
-
-      }
-
     }
 
     @media (max-width:480px) {
@@ -620,7 +621,7 @@
       }
 
       .couple-img {
-        width: 300px;
+        width: 260px;
       }
 
       .venue-text {
@@ -630,7 +631,6 @@
       .corner {
         width: 90px;
       }
-
     }
   </style>
 
@@ -657,6 +657,7 @@
 
       <div class="content">
 
+        <!-- TOP -->
         <div data-aos="fade-down">
 
           <h2 class="arabic">
@@ -670,10 +671,12 @@
 
         </div>
 
+        <!-- SAVE DATE -->
         <div class="save-date" data-aos="zoom-in">
           Save The Date
         </div>
 
+        <!-- TEXT -->
         <p class="invite-text" data-aos="fade-up">
           Together with our families we request the honour
           of your presence at the wedding of
@@ -709,9 +712,13 @@
           </div>
 
           <div class="center-date">
+
             <span>July</span>
+
             <h2>19</h2>
+
             <small>2026</small>
+
           </div>
 
           <div class="date-side">
@@ -773,22 +780,20 @@
     });
 
     /* ========================= */
-    /* LETTER WRITING ANIMATION */
+    /* WRITING TEXT ANIMATION */
     /* ========================= */
 
     const groomText = "Mohamed Abubakkar Siddiq";
-
-    const brideText = " Rizwana";
+    const brideText = "Rizwana";
 
     const groomElement = document.querySelector(".typing-groom");
-
     const brideElement = document.querySelector(".typing-bride");
 
     let groomIndex = 0;
-
     let brideIndex = 0;
 
     /* Groom Typing */
+
     function typeGroom() {
 
       if (groomIndex < groomText.length) {
@@ -797,13 +802,12 @@
 
         groomIndex++;
 
-        setTimeout(typeGroom, 80);
-
+        setTimeout(typeGroom, 90);
       }
-
     }
 
     /* Bride Typing */
+
     function typeBride() {
 
       if (brideIndex < brideText.length) {
@@ -812,13 +816,12 @@
 
         brideIndex++;
 
-        setTimeout(typeBride, 80);
-
+        setTimeout(typeBride, 90);
       }
-
     }
 
-    /* Start Animation */
+    /* START */
+
     window.onload = () => {
 
       typeGroom();
@@ -827,8 +830,7 @@
 
         typeBride();
 
-      }, 2500);
-
+      }, 3000);
     };
 
   </script>
