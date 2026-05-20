@@ -229,44 +229,82 @@
     }
 
     .groom-name,
-    .bride-name {
-      font-family: 'Alex Brush', cursive;
-      font-size: 90px;
-      color: #6e2235;
-      line-height: 1.2;
+.bride-name {
+  font-family: 'Alex Brush', cursive;
+  font-size: 90px;
+  color: #6e2235;
+  line-height: 1.2;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 
-      width: 100%;
-      text-align: center;
+  width: 100%;
+  text-align: center;
 
-      word-break: break-word;
-      overflow-wrap: break-word;
-    }
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 
-    .typing-groom,
-    .typing-bride {
-      display: inline-block;
-      min-height: 110px;
-    }
+/* Qualification Highlight */
 
-    .qualification {
-      margin-top: 5px;
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      color: #8d4a5c;
-      text-transform: uppercase;
-    }
+.qualification-tag{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
 
-    .and-text {
-      font-family: 'Great Vibes', cursive;
-      font-size: 75px;
-      color: #c56a7d;
-      margin: 15px 0;
-    }
+  color: #c56a7d;
+
+  background: rgba(197,106,125,0.12);
+
+  border: 1px solid #d9a1ad;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  letter-spacing: 1px;
+
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: 10px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+  .groom-name,
+  .bride-name{
+    font-size: 48px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .qualification-tag{
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .groom-name,
+  .bride-name{
+    font-size: 38px;
+  }
+
+  .qualification-tag{
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+}
 
     /* ========================= */
     /* COUPLE IMAGE */
@@ -635,28 +673,37 @@
         </p>
 
         <!-- NAMES -->
-        <div class="names">
+<div class="names">
 
-          <!-- Groom -->
-          <div class="person-box">
+  <!-- Groom -->
+  <div class="person-box">
 
-            <h1 class="groom-name">
-              <span class="typing-groom"></span>
-            </h1>
+    <h1 class="groom-name">
+      <span class="typing-groom"></span>
 
-          </div>
+      <span class="qualification-tag">
+        Usmani
+      </span>
+    </h1>
 
-          <div class="and-text">&</div>
+  </div>
 
-          <!-- Bride -->
-          <div class="person-box">
+  <div class="and-text">&</div>
 
-            <h1 class="bride-name">
-              <span class="typing-bride"></span>
-            </h1>
-          </div>
+  <!-- Bride -->
+  <div class="person-box">
 
-        </div>
+    <h1 class="bride-name">
+      <span class="typing-bride"></span>
+
+      <span class="qualification-tag">
+        MBA
+      </span>
+    </h1>
+
+  </div>
+
+</div>
 
         <!-- COUPLE IMAGE -->
         <div class="couple-wrapper" data-aos="zoom-in-up">
@@ -746,9 +793,8 @@
     /* TYPING ANIMATION */
     /* ========================= */
 
-    const groomText = "I.Mohamed Abu Bakkar Siddiq Usmani";
-    const brideText = "A.Rizwana MBA";
-
+    const groomText = "I. Mohamed Abu Bakkar Siddiq";
+    const brideText = "A. Rizwana";
     const groomElement = document.querySelector(".typing-groom");
     const brideElement = document.querySelector(".typing-bride");
 
