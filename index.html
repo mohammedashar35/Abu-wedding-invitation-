@@ -540,6 +540,42 @@
         width: 90px;
       }
     }
+    /* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer-text{
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #7f3043;
+  letter-spacing: 1px;
+  padding: 20px 10px;
+  position: relative;
+  z-index: 10;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+  .footer-text{
+    font-size: 26px;
+    margin-top: 35px;
+    line-height: 1.5;
+    padding: 15px 10px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .footer-text{
+    font-size: 22px;
+  }
+
+}
   </style>
 
 </head>
@@ -681,14 +717,10 @@
     </div>
 
   </section>
-
-  <!-- MUSIC -->
-  <audio autoplay loop>
-    <source
-      src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9d4f6c5e65.mp3?filename=beautiful-piano-ambient-110624.mp3"
-      type="audio/mp3">
-  </audio>
-
+ <!-- FOOTER -->
+<footer class="footer-text">
+  Design & Developed By S.Mohammed Ashar
+</footer>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
