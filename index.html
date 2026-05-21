@@ -578,6 +578,64 @@
         width: 90px;
       }
     }
+
+    /* ========================= */
+/* LOCATION BUTTON */
+/* ========================= */
+
+.location-btn-wrapper{
+  margin-top: 25px;
+}
+
+.location-btn{
+
+  display: inline-block;
+
+  padding: 14px 34px;
+
+  background: linear-gradient(135deg, #c56a7d, #7f3043);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  border-radius: 50px;
+
+  letter-spacing: 1px;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+}
+
+.location-btn:hover{
+
+  transform: translateY(-4px) scale(1.03);
+
+  color: #fff;
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .location-btn{
+
+    font-size: 15px;
+
+    padding: 12px 26px;
+
+  }
+
+}
     /* ========================= */
 /* FOOTER */
 /* ========================= */
@@ -763,6 +821,17 @@
           <div class="qr-box">
 
             <img src="qr.jpeg" alt="QR">
+
+          </div>
+          <div class="location-btn-wrapper">
+
+  <a href="https://maps.app.goo.gl/7X2VWLmUxUyND7gq5"
+     target="_blank"
+     class="location-btn">
+
+    Open Location
+
+  </a>
 
           </div>
 
